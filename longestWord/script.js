@@ -4,8 +4,7 @@ function findLongestWordLength(str) {
     let word = words[0];
 
     for (let i = 0; i < words.length; i++) {
-
-        if (words[i].length > max && words[i].length > word[i].length) {
+        if (words[i].length > max) {
             max = words[i].length;
             word = words[i];
         }
@@ -15,5 +14,5 @@ function findLongestWordLength(str) {
     return max;
 }
 
-findLongestWordLength("The quick brown ox jumped over the lazy dog")
+findLongestWordLength("What if we try a super-long word such as otorhinolaryngology")
 
