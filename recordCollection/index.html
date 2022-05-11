@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Record Collection</title>
+  </head>
+  <body>
+    <h1>Record collection</h1>
+    <h2>Check console for answer</h2>
+    <p>
+      You are given an object literal representing a part of your musical album
+      collection. Each album has a unique id number as its key and several other
+      properties. Not all albums have complete information.
+    </p>
+    <p>
+      You start with an updateRecords function that takes an object literal,
+      records, containing the musical album collection, an id, a prop (like
+      artist or tracks), and a value. Complete the function using the rules
+      below to modify the object passed to the function.
+    </p>
+    <p>Your function must always return the entire record collection object.</p>
+    <ul>
+      <li>
+        If prop isn't tracks and value isn't an empty string, update or set that
+        album's prop to value.
+      </li>
+      <li>
+        If prop is tracks but the album doesn't have a tracks property, create
+        an empty array and add value to it.
+      </li>
+      <li>
+        If prop is tracks and value isn't an empty string, add value to the end
+        of the album's existing tracks array.
+      </li>
+      <li>
+        If value is an empty string, delete the given prop property from the
+        album.
+      </li>
+    </ul>
+    <p>Note: A copy of the recordCollection object is used for the tests.</p>
+    <code>updateRecords(recordCollection, 5439, "artist", "ABBA")</code>
+    <div class="challenge-test-suite">
+      <div>
+        <div aria-hidden="true" class="test-output">
+          <p>
+            After
+            <code>updateRecords(recordCollection, 5439, "artist", "ABBA")</code
+            >, <code>artist</code> should be the string <code>ABBA</code>
+          </p>
+        </div>
+      </div>
+      <div class="test-result">
+        <div aria-hidden="true" class="test-output">
+          <p>
+            After
+            <code
+              >updateRecords(recordCollection, 5439, "tracks", "Take a Chance on
+              Me")</code
+            >, <code>tracks</code> should have the string
+            <code>Take a Chance on Me</code> as the last and only element.
+          </p>
+        </div>
+      </div>
+      <div class="test-result">
+        <div aria-hidden="true" class="test-output">
+          <p>
+            After
+            <code>updateRecords(recordCollection, 2548, "artist", "")</code>,
+            <code>artist</code> should not be set
+          </p>
+        </div>
+      </div>
+      <div class="test-result">
+        <div aria-hidden="true" class="test-output">
+          <p>
+            After
+            <code
+              >updateRecords(recordCollection, 1245, "tracks", "Addicted to
+              Love")</code
+            >, <code>tracks</code> should have the string
+            <code>Addicted to Love</code> as the last element.
+          </p>
+        </div>
+      </div>
+      <div class="test-result">
+        <div aria-hidden="true" class="test-output">
+          <p>
+            After
+            <code>updateRecords(recordCollection, 2468, "tracks", "Free")</code
+            >, <code>tracks</code> should have the string <code>1999</code> as
+            the first element.
+          </p>
+        </div>
+      </div>
+      <div class="test-result">
+        <div aria-hidden="true" class="test-output">
+          <p>
+            After
+            <code>updateRecords(recordCollection, 2548, "tracks", "")</code>,
+            <code>tracks</code> should not be set
+          </p>
+        </div>
+      </div>
+      <div class="test-result">
+        <div aria-hidden="true" class="test-output">
+          <p>
+            After
+            <code
+              >updateRecords(recordCollection, 1245, "albumTitle",
+              "Riptide")</code
+            >, <code>albumTitle</code> should be the string <code>Riptide</code>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

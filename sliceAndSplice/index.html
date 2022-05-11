@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slice and Splice</title>
+  </head>
+  <body>
+    <h1>Slice and Splice</h1>
+    <p>Check console</p>
+    <pre><code>
+        function frankenSplice(arr1, arr2, n) {
+            let arr3 = [];
+            arr3 = arr2.slice();
+            for (let i = arr1.length - 1; i >= 0; i--) {
+                arr3.splice(n, 0, arr1[i]);
+            }
+            console.log(arr3)
+            return arr3;
+        }
+        frankenSplice([1, 2, 3], [4, 5, 6], 1);
+        frankenSplice([1, 2], ["a", "b"], 1);
+        frankenSplice(["claw", "tentacle"], ["head", "shoulders", "knees", "toes"], 2)
+        frankenSplice([1, 2, 3, 4], [], 0)
+    </code></pre>
+    <script src="script.js"></script>
+  </body>
+</html>
