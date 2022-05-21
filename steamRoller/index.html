@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Steam Roller</title>
+  </head>
+  <body>
+    <h1>Steamroller</h1>
+    <p>
+      Flatten a nested array. You must account for varying levels of nesting.
+    </p>
+
+    <ul>
+      <li>steamrollArray([[["a"]], [["b"]]]) should return ["a", "b"].</li>
+
+      <li>steamrollArray([1, [2], [3, [[4]]]]) should return [1, 2, 3, 4].</li>
+
+      <li>steamrollArray([1, [], [3, [[4]]]]) should return [1, 3, 4].</li>
+
+      <li>steamrollArray([1, {}, [3, [[4]]]]) should return [1, {}, 3, 4].</li>
+      <li>
+        Your solution should not use the Array.prototype.flat() or
+        Array.prototype.flatMap() methods.
+      </li>
+    </ul>
+    <script src="script.js"></script>
+  </body>
+</html>

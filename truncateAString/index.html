@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Truncate a string</title>
+  </head>
+  <body>
+    <h1>Truncate a String</h1>
+    <p>
+      Truncate a string (first argument) if it is longer than the given maximum
+      string length (second argument). Return the truncated string with a ...
+      ending.
+    </p>
+
+    <ul>
+      <li>
+        truncateString("A-tisket a-tasket A green and yellow basket", 8) should
+        return the string A-tisket....
+      </li>
+
+      <li>
+        truncateString("Peter Piper picked a peck of pickled peppers", 11)
+        should return the string Peter Piper....
+      </li>
+
+      <li>
+        truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket
+        a-tasket A green and yellow basket".length) should return the string
+        A-tisket a-tasket A green and yellow basket.
+      </li>
+
+      <li>
+        truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket
+        a-tasket A green and yellow basket".length + 2) should return the string
+        A-tisket a-tasket A green and yellow basket.
+      </li>
+
+      <li>truncateString("A-", 1) should return the string A....</li>
+
+      <li>
+        truncateString("Absolutely Longer", 2) should return the string Ab....
+      </li>
+    </ul>
+    <script src="script.js"></script>
+  </body>
+</html>
