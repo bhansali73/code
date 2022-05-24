@@ -1,13 +1,11 @@
 function truthCheck(collection, pre) {
-    //console.log(collection, pre, typeof pre)
-    collection.every(function (item) {
+    console.log(pre.length, pre);
+    return collection.every(function (element) {
+        return element.hasOwnProperty(pre) && Boolean(element[pre]);
+    });
 
-
-        console.log(pre);
-        //console.log(item)
-        //console.log(item[pre])
-    })
-    return collection.every(item => item[pre]);
+    //Short answer
+    //return collection.every(el=>el[pre])
 }
 
 truthCheck([{ name: "Quincy", role: "Founder", isBot: false }, { name: "Naomi", role: "", isBot: false }, { name: "Camperbot", role: "Bot", isBot: true }], "isBot") //should return false.
